@@ -1,0 +1,107 @@
+Legenda: 
+
+* [feat]: Algo que deve ser verdadeiro sobre o trabalho.
+* [todo]: Algo que deve ser feito.
+* [?]:    Duvida sobre o que deve ser feito
+* [nice]: Um jeito melhor de realizar o trabalho. Mas nao obrigatorio.
+
+* [bug]:  Algum defeito que deve ser resolvido antes da entrega
+* [info]: Informacao sobre o trabalho que nao implica em acao.
+* [done]: Indica que algo que era [feat] out [bug] foi resolvido.
+
+* [?]    -> [info]
+* [feat] -> [done]
+* [todo] -> [done]
+* [nice] -> [done]
+
+---------------------------- admin ---------------------------------
+
+- [?] - Quando vai ser a entrega
+
+- [info] - O projeto ser sobre um problema de classificacao ou regressao
+
+- [info] - O conjunto utilizado sera o CIFAR-10
+
+- [info] - No desenvolvimento podera ser utilizados bibliotecas de machine learning e.g (PyTorch, Keras,...)
+
+- [info] - Detalhe do primeiro assignment: https://cs231n.github.io/assignments2016/assignment1/
+
+- [info] - Link do dados http://www.cs.toronto.edu/~kriz/cifar.html
+------------------ politica-de-utilizacao-de-dados -----------------
+
+- [feat] - O conjunto de dados deve ser inicialmente separado em dados de treinamento e de teste.
+
+- [feat] - O conjunto de teste devera ser mantido intocado ate o final. 
+
+- [feat] - O conjunto de teste deve ser utilizado apenas uma vez, para avaliar o modelo final.
+
+- [info] - O conjunto de treinamento pode ser explorado de diferentes formas para o treinamento, escolha de hiperparametros ou selecao do modelo final.
+
+---------------- criterio-de-avaliacao-de-desempenho ---------------
+
+- [feat] - Devem ser definidas metricas para a avaliacao do modelo, no contexto do problema considerado. 
+
+- [nice] - Considerar a metrica de perfomance computacional. Quanto tempo leva para treinar o modelo.
+- [nice] - Considerar a complexidade do modelo como metrica. Quantas linhas de codigo sao necessarias para implementar o modelo.
+
+- [nice] - Considerar diferentes metricas. 
+- [nice] - Analisar os exemplos incorretamente preditos.
+- [nice] - Verificar se existe alguma caracteristica predominante nos erros
+
+---------------------- solucao-baseline ----------------------------
+
+- [feat] - Deve ser realizada uma solucao baseline para o problema
+
+- [info] - A solucao baseline eh uma solucao ja conhecida para o problema. Ou alguma solucao facil de implementar.
+
+
+------------------------- exploracao ------------------------------
+
+- [feat] - Diversos cenarios devem ser explorados
+
+- [info] - Diferentes algoritmos constituem diferentes cenarios
+- [info] - Utilizacao de apenas parte dos dados constituem diferentes cenarios.
+- [info] - Diferentes funcaoes de perda constituem diferentes cenarios
+- [info] - Adicao de ruido eh uma forma de explorar um cenario diferente.
+- [info] - Data augmentation eh uma forma de explorar um cenario diferente.
+
+- [feat] - Essas exploracoes devem ser planejadas com um objetivo em mente.
+- [feat] - O desempenho nesses modelos deve ser comparado com a baseline. 
+- [feat] - As diferencas com a baseline devem ser apontadas e discutidas.
+- [feat] - Os experimentos devem ser realizados de forma que os resultados sejam diretamente comparaveis.
+
+
+------------------ selecao-de-um-modelo-final ----------------------
+
+- [feat] - Selecionar um modelo final
+- [feat] - Justificar a selecao do modelo final
+
+------------------ avaliacao-do-modelo-final ----------------------
+
+- [feat] - O modelo final devera ser avaliado sobre o conjunto de teste.
+- [feat] - A avaliacao do modelo final devera seguir os criterios de avaliacao estabelecidos.
+- [feat] - Devera ser discutido o desempenho do modelo final. 
+- [feat] - Devera ser discutido a generalizacao do aprendizado.
+
+----------------------- relatorio-final --------------------------
+
+- [feat] - O relatorio final devera incluir um link para um repositorio com os codigos desenvolvidos.
+- [feat] - Codigos de outras pessoas devem ser citados explicitamente
+- [feat] - Exemplos de outras pessos devem ser citados explicitamente.
+
+- [feat] - Descricao do problema e dados utilizados eh item do relatorio final.
+
+- [feat] - Dados efetivamente utilizados e particao adotada eh um item do relatorio final
+
+- [feat] - Solucao baseline eh um item do relatorio final
+
+- [feat] - Principais exploracoes realizadas eh um item do relatorio final.
+
+- [?] - Quais avaliacoes foram feitas eh um item do relatorio final.
+
+- [feat] - Como foi feita a selecao final eh  um item do relatorio final. 
+
+- [feat] - O desempenho do modelo final no conjunto de teste eh um item do relatorio final.
+
+- [feat] - A comparacao com o desempenho do modelo final no conjunto de teste com o desempenho na fase treinamente/selecao eh um item do relatorio final.
+
