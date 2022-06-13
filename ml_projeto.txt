@@ -27,6 +27,9 @@ Legenda:
 - [info] - Detalhe do primeiro assignment: https://cs231n.github.io/assignments2016/assignment1/
 
 - [info] - Link do dados http://www.cs.toronto.edu/~kriz/cifar.html
+
+- [info] - Modelo inicial: https://github.com/jariasf/CS231n
+
 ------------------ politica-de-utilizacao-de-dados -----------------
 
 - [feat] - O conjunto de dados deve ser inicialmente separado em dados de treinamento e de teste.
