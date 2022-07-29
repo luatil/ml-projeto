@@ -1,6 +1,9 @@
+import requests
+from PIL import Image
 from matplotlib import pyplot as plt
 from torchvision import datasets
 import torch
+from torchvision.transforms import transforms
 
 
 class CIFAR10TrainingModel:
@@ -32,7 +35,8 @@ class CIFAR10TrainingModel:
     def load_and_transform_data(self, transform_list):
         self.data = datasets.CIFAR10(self.data_path, train=True, download=True,
                                      transform=transform_list)
-        self.train_set, self.val_set, self.overfit_set = torch.utils.data.random_split(self.data, [40000, 10000-100, 100])
+        self.train_set, self.val_set, self.overfit_set = torch.utils.data.random_split(self.data,
+                                                                                       [40000, 10000 - 100, 100])
         self.val_loader = torch.utils.data.DataLoader(self.val_set, batch_size=64,
                                                       shuffle=False)
         self.train_loader = torch.utils.data.DataLoader(self.train_set, batch_size=64,
@@ -156,3 +160,14 @@ class CIFAR10TrainingModel:
 
     def get_number_of_trainable_parameters(self):
         return sum(p.numel() for p in self.model.parameters() if p.requires_grad)
+
+    def prediction_from_url(self, url):
+        response = requests.get(url, stream=True)
+        img = Image.open(response.raw)
+        transform = transforms.Compose([transforms.Resize((32, 32)),
+                                        transforms.ToTensor(),
+                                        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+                                        ])
+        self.model.eval()
+        _, prediction = torch.max(self.model(transform(img).unsqueeze(0)), 1)
+        return self.classes[prediction.item()]
